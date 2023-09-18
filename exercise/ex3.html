@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page with Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .card {
+        background-color: #fff;
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .card h2 {
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .error-message {
+        color: #ff0000;
+        margin-top: 5px;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+
+      button {
+        background-color: #0074d9;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <p class="error-message" id="emailError"></p>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <p class="error-message" id="passwordError"></p>
+        </div>
+        <p class="error-message" id="loginError"></p>
+        <div class="button-container">
+          <button type="button" onclick="validateLogin()">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateLogin() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+        const loginError = document.getElementById("loginError");
+
+        const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+        if (!emailRegex.test(email)) {
+          emailError.textContent = "Invalid email address.";
+          return;
+        } else {
+          emailError.textContent = "";
+        }
+
+        const passwordRegex =
+          /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{6,}$/;
+        if (!passwordRegex.test(password)) {
+          passwordError.textContent =
+            "Password must be at least 6 characters with at least one uppercase letter and one symbol.";
+          return;
+        } else {
+          passwordError.textContent = "";
+        }
+        alert("Login successful!");
+      }
+    </script>
+  </body>
+</html>
