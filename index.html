@@ -1,102 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+</head>
 
-    <style type="text/css">
-      h5,
-      h6 {
-        color: white;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-    </style>
-  </head>
-  <body style="background-color: black">
-    <img
-      src="./games.webp"
-      alt=""
-      usemap="#mapping"
-      class="free"
-      style="margin-left: 250px"
-    />
+    <frameset rows="10%,80%,10%">
+    <frame src="top.html" name="top">
+    <frameset cols="15%,85%">
+        <frame src="left.html" name="left">
+        <frame src="right.html" name="right">
+    </frameset>
+    <frame src = "footer.html" name="footer">
+</frameset>
+    
 
-    <map name="mapping">
-      <area
-        shape="rect"
-        coords="0,0,460,260"
-        href="https://www.monsterhunter.com/rise/us/"
-      />
-      <area
-        shape="rect"
-        coords="474,0,940,260"
-        href="https://www.gothamknightsgame.com/en-us"
-      />
-      <area
-        shape="rect"
-        coords="0,270,460,530"
-        href="https://store.epicgames.com/en-US/p/god-of-war"
-      />
-      <area
-        shape="rect"
-        coords="474,270,940,530"
-        href="https://www.hogwartslegacy.com/en-us"
-      />
-      <area
-        shape="rect"
-        coords="0,542,940,788"
-        href="https://en.bandainamcoent.eu/elden-ring/elden-ring"
-        alt=""
-      />
-    </map>
-
-    <div style="display: flex; flex-direction: column; gap: 10px">
-      <div class="Container">
-        <div>
-          <img src="./godOfWar.jpg" alt="" height="320px" />
-          <div class="name-price">
-            <h5>God Of War</h5>
-            <h6>Cost : $9.89</h6>
-          </div>
-          <button class="button">Buy Me!</button>
-        </div>
-        <div>
-          <img src="./valorant.jpeg" alt="" height="320px" />
-          <div class="name-price">
-            <h5>Valorant</h5>
-            <h6>Cost : Free</h6>
-          </div>
-          <button class="button">Buy Me!</button>
-        </div>
-        <div>
-          <img src="./minecraft.jpg" alt="" height="320px" width="300px" />
-          <div class="name-price">
-            <h5>MineCraft</h5>
-            <h6>Cost : Free</h6>
-          </div>
-          <button class="button">Buy Me!</button>
-        </div>
-      </div>
-      <div class="Container">
-        <div>
-          <img src="./godOfWar.jpg" alt="" height="320px" />
-          <h5>God Of War</h5>
-          <button class="button">Buy Me!</button>
-        </div>
-        <div>
-          <img src="./valorant.jpeg" alt="" height="320px" />
-          <h5>Valorant</h5>
-          <button class="button">Buy Me!</button>
-        </div>
-        <div>
-          <img src="./godOfWar.jpg" alt="" height="320px" />
-          <h5>God Of War</h5>
-          <button class="button">Buy Me!</button>
-        </div>
-      </div>
-    </div>
-  </body>
 </html>
